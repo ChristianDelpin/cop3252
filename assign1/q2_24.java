@@ -1,23 +1,15 @@
 /*
-    Arithmetic, Smallest, and Largest
-    Accept 3 integers from the user, then display the following:
-    - Sum of all numbers
-    - Average of all numbers
-    - Product of all numbers
-    - Smallest number
-    - Largest number
+    2.24: Largest and Smallest Integers
+    Accept 3 integers from the user, then determine and display the largest and smallest integers.
 */
-
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class numStats
+public class q2_24
 {
     public static void main(String[] args)
     {
-        // I/O
         Scanner input = new Scanner(System.in);
         List<Integer> numbers = new ArrayList<>(3);
 
@@ -27,23 +19,6 @@ public class numStats
             numbers.add(input.nextInt());
         }
         
-        // sum
-        int sum = 0;
-        for(int num : numbers)
-        {
-            sum += num;
-        }
-
-        // average
-        int avg = sum/numbers.size();
-
-        // product
-        int product = 1;
-        for(int num : numbers)
-        {
-            product *= num;
-        }
-
         // smallest
         int smallest = numbers.get(0);
         for(int num : numbers)
@@ -64,10 +39,7 @@ public class numStats
             }
         }
 
-        System.out.println("Sum: " + sum);
-        System.out.println("Average: " + avg);
-        System.out.println("Product: " + product);
-        System.out.println("Smallest: " + smallest);
-        System.out.println("Largest: " + largest);
+        System.out.println("Smallest number: " + smallest);
+        System.out.println("Largest number: " + largest);
     }
 }

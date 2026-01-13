@@ -5,7 +5,7 @@
 
 import java.util.Scanner;
 
-public class parity
+public class q2_25
 {
     public static void main(String[] args)
     {
