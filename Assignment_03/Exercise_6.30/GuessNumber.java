@@ -10,7 +10,6 @@ public class GuessNumber
         {
             System.out.print("\nEnter your guess (1-1000): ");
             guess = input.nextInt();
-
             if(guess>secretNumber)
             {
                 System.out.println("Too high, try again");
@@ -20,8 +19,6 @@ public class GuessNumber
                 System.out.println("Too low, try again.");
             }
         }
-        
         System.out.println("Congratulations! You guessed the number!");
-        
     }
 }
