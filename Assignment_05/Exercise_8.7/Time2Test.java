@@ -12,9 +12,7 @@ public class Time2Test {
       displayTime("t2: hour specified; minute and second defaulted", t2);
 
       t1.tick();
-      t1.incrementMinute();
-      t1.incrementHour();
-      displayTime("t1 after incrementing", t1);
+      displayTime("t1 after tick()", t1);
 
       t2.incrementMinute();
       displayTime("t2 after incrementing minute", t2);
