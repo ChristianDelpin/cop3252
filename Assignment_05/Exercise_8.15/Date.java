@@ -56,7 +56,7 @@ class Date
         int numDaysInYear = day;
         for(int i=1; i<month; i++)
         {
-            numDaysInYear+=daysPerMonth[month];
+            numDaysInYear+=daysPerMonth[i];
         }
         t = t + "\n" + String.format("%03d %04d", numDaysInYear, year);
         return t;
