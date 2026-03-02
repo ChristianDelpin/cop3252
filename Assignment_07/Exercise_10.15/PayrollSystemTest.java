@@ -15,6 +15,11 @@ public class PayrollSystemTest {
          new BasePlusCommissionEmployee(                                  
          "Bob", "Lewis", "444-44-4444", 5000, .04, 300);                  
 
+
+
+
+      PieceWorker pieceWorker = new PieceWorker("Philip", "Garcia", "555-55-5555", 502, 1.05);
+
       System.out.println("Employees processed individually:");
 
       System.out.printf("%n%s%n%s: $%,.2f%n%n", 
@@ -28,13 +33,14 @@ public class PayrollSystemTest {
          "earned", basePlusCommissionEmployee.earnings());
 
       // create four-element Employee array
-      Employee[] employees = new Employee[4]; 
+      Employee[] employees = new Employee[5]; 
 
       // initialize array with Employees        
       employees[0] = salariedEmployee;          
       employees[1] = hourlyEmployee;            
       employees[2] = commissionEmployee;        
       employees[3] = basePlusCommissionEmployee;
+      employees[4] = pieceWorker;
 
       System.out.printf("Employees processed polymorphically:%n%n");
 
