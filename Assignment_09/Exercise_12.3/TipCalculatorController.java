@@ -36,16 +36,25 @@ public class TipCalculatorController {
    @FXML
    private TextField totalTextField;
 
+   @FXML
+   private TextField numPeople;
+
+   @FXML
+   private TextField perPersonField;
+
    // calculates and displays the tip and total amounts
    @FXML
    private void calculateButtonPressed(ActionEvent event) {
       try {
          BigDecimal amount = new BigDecimal(amountTextField.getText());
          BigDecimal tip = amount.multiply(tipPercentage);
+         BigDecimal qtyPeople = new BigDecimal(numPeople.getText());
          BigDecimal total = amount.add(tip);
+         BigDecimal perPerson = tip.divide(qtyPeople, 2, RoundingMode.HALF_UP);
 
          tipTextField.setText(currency.format(tip));
          totalTextField.setText(currency.format(total));
+         perPersonField.setText(currency.format(perPerson));
       }
       catch (NumberFormatException ex) {
          amountTextField.setText("Enter amount");
