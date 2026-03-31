@@ -3,6 +3,8 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
+import java.util.Observable;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -72,6 +74,17 @@ public class TipCalculatorController {
          }
       );
    }
+   amountTextField.textProperty().addListener(
+      new ChangeListener<String>() {
+         @Override
+         public void changed(ObservableValue<? extends String> ov,
+            String oldValue, String newValue)
+            {
+               // TODO: Implement.
+            }
+      }
+   )
+   
 }
 
 /**************************************************************************
