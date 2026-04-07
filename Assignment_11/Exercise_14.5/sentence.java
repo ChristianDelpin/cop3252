@@ -14,23 +14,23 @@ public class sentence
 
         for(int i=0; i<20; i++)
         {
-            String fullSentence = "";
+            StringBuilder fullSentence = new StringBuilder();
             
             String a = articles[random.nextInt(0, 5)];
-            fullSentence+= a.substring(0,1).toUpperCase() + a.substring(1);
+            fullSentence.append(a.substring(0,1).toUpperCase()).append(a.substring(1));
             // lol just thought, alternatively I could just have the articles all capitalized, then .toLower() the result string on the 2nd usage. oh well
 
             
-            fullSentence+= " " + nouns[random.nextInt(0,5)];
+            fullSentence.append(" ").append(nouns[random.nextInt(0,5)]);
 
-            fullSentence+= " " + verbs[random.nextInt(0,5)];
+            fullSentence.append(" ").append(verbs[random.nextInt(0,5)]);
             
-            fullSentence+= " " + prepositions[random.nextInt(0,5)];
+            fullSentence.append(" ").append(prepositions[random.nextInt(0,5)]);
 
-            fullSentence+= " " + articles[random.nextInt(0,5)];
+            fullSentence.append(" ").append(articles[random.nextInt(0,5)]);
 
-            fullSentence+= " " + nouns[random.nextInt(0,5)] + ".";
-            System.out.println(fullSentence);
+            fullSentence.append(" ").append(nouns[random.nextInt(0,5)]).append(".");
+            System.out.println(fullSentence.toString());
         }
     }
 }
